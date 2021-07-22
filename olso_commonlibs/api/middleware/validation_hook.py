@@ -20,7 +20,7 @@ import jsonschema
 from pecan import abort
 from pecan import hooks
 
-import oslo_commonlibs.hook_priorities as priority
+import oslo_commonlibs.common.hook_priorities as priority
 
 
 class ValidationHook(hooks.PecanHook):

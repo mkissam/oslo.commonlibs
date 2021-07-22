@@ -17,7 +17,7 @@ import copy
 from oslo_config import cfg
 from oslo_policy import policy
 
-from oslo_commonlibs import policies
+from oslo_commonlibs.common import policies
 
 CONF = cfg.CONF
 ENFORCER = None

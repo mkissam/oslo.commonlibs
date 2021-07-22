@@ -20,7 +20,7 @@ import functools
 
 from pecan import abort
 
-from oslo_commonlibs import exception
+from oslo_commonlibs.common import exception
 
 
 def db_exceptions(func):

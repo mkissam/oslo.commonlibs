@@ -17,7 +17,7 @@ API JSON validator base.
 import abc
 import jsonschema as schema
 
-from oslo_commonlibs import exception
+from oslo_commonlibs.common import exception
 
 
 def get_invalid_property(validation_error):
