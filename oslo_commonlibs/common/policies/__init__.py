@@ -12,7 +12,7 @@
 
 import itertools
 
-from oslo_commonlibs.policies import base
+from oslo_commonlibs.common.policies import base
 
 
 def list_rules():
