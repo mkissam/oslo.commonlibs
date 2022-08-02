@@ -47,9 +47,17 @@ class APIBase(wtypes.Base):
             attribute_names = [n for n in attribute_names
                                if getattr(self, n) != wtypes.Unset]
 
-        values = dict((name, self._lookup(name)) for name in attribute_names)
+        # values = dict((name, self._lookup(name)) for name in attribute_names)
 
         # TODO(Refactor as a recursive function)
+        values = {}
+        for name in attribute_names:
+            values[name] = self._lookup(name)
+            if isinstance(values[name], list):
+                list_of_dicts = []
+                for item in values[name]:
+                    list_of_dicts.append(item.as_dict(omit_unset=omit_unset))
+                values[name] = list_of_dicts
 
         return values
 
