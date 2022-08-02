@@ -46,10 +46,6 @@ class APIBase(wtypes.Base):
         if omit_unset:
             attribute_names = [n for n in attribute_names
                                if getattr(self, n) != wtypes.Unset]
-
-        # values = dict((name, self._lookup(name)) for name in attribute_names)
-
-        # TODO(Refactor as a recursive function)
         values = {}
         for name in attribute_names:
             values[name] = self._lookup(name)
