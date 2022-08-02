@@ -279,6 +279,14 @@ class DBValueError(DBException):
     message = "Unknown value."
 
 
+class DBEmptyObjectError(DBException):
+    """Empty object error exception
+
+    """
+
+    message = "Cannot update to empty object."
+
+
 class InvalidObject(APICommonHTTPException):
     status_code = 400
 
